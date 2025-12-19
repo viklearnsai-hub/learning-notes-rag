@@ -9,3 +9,21 @@ A simple Retrieval-Augmented Generation (RAG) system that allows users to upload
 # Activating it
 
 in the venv_name folder looks for "scripts folder" and then ".bat" file and execute it in terminal
+
+# Start the server
+
+    uvicorn app.main:app --reload
+
+# Debuggin
+
+Create a Debug Configuration (One Time)
+
+This is the Python equivalent of a Run/Debug configuration in IntelliJ.
+
+Go to Run & Debug tab (left sidebar)
+
+Click “create a launch.json file”
+
+Choose Python
+
+Choose “Module”
