@@ -1,15 +1,8 @@
 from fastapi import UploadFile
-
+from app.library.helpers.validation import validate_file_type
 class UploadFileService:
 
-    def uploadFile(self,uploadedFile:UploadFile):
-        if(uploadedFile == "" or uploadedFile == None):
-            return "File not present"
-        extn  = uploadedFile.filename.split(".")[1]
-
-        if(extn == "md" or extn == "txt"):
-                print(uploadedFile.file.read())
-                uploadedFile.close()
-        else:
-            return "Invalid format"
+    def upload_file(self,uploaded_file:UploadFile) -> bool:
+        if (validate_file_type(uploaded_file)):
+            return True
 

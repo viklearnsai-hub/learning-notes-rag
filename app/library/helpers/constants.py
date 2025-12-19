@@ -1,0 +1,4 @@
+
+
+ACCPECTED_FILE_EXTENSIONS = ["md","txt"]
+MAX_FILE_SIZE = 1024
