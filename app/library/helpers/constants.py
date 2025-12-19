@@ -1,4 +1,3 @@
 
 
-ACCPECTED_FILE_EXTENSIONS = ["md","txt"]
-MAX_FILE_SIZE = 1024
+ACCPECTED_FILE_CONTENT_TYPE = {"text/markdown","text/plain"}
