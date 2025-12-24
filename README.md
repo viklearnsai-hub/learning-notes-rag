@@ -27,3 +27,7 @@ Click “create a launch.json file”
 Choose Python
 
 Choose “Module”
+
+# Review command
+
+git diff <old_commit> <new_commit> > code_review_git_diff.txt
