@@ -1,0 +1,30 @@
+NORMAL UTF-8 TEXT
+This is a normal line.
+
+WINDOWS LINE ENDINGS
+This line uses CRLF.
+
+EXTRA WHITESPACE
+This    line     has   irregular   spacing.
+
+UNICODE CHARACTERS
+Café naïve résumé coöperate — ✓ ✔ ✨
+
+MIXED QUOTES
+“Smart quotes” vs "dumb quotes"
+
+TABS AND SPACES
+	This line starts with a tab.
+    This line starts with spaces.
+
+NON-ASCII DASHES
+Hyphen-minus - vs en–dash vs em—dash
+
+TRAILING SPACES TEST
+Line with trailing spaces above.
+
+MULTIPLE BLANK LINES
+
+
+
+END OF FILE

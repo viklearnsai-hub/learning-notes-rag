@@ -1,15 +1,17 @@
-from fastapi import UploadFile,status
+from fastapi import UploadFile,status,HTTPException
 from app.library.helpers.validation import validate_file_type
+from app.library.helpers.file_helper import read_file_and_normalize
 from app.models.uploadresponse import UploadResponse
-from typing import Tuple
 class UploadFileService:
 
-    def upload_file(self,uploaded_file:UploadFile) -> Tuple[UploadResponse,int]:
+    async def upload_file(self,uploaded_file:UploadFile) -> UploadResponse:
         if (validate_file_type(uploaded_file)):
+            content = await read_file_and_normalize(uploaded_file)
+            print("Normalized Content",content)
             res = UploadResponse(msg="Upload Successful",successful=True)
-            return res,status.HTTP_200_OK
+            return res
         else:
             res = UploadResponse(msg="Invalid filetype",successful=False)
-            return res,status.HTTP_400_BAD_REQUEST
+            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST)
 
 
